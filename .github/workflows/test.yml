@@ -1,6 +1,6 @@
 name: test automation
 on:
- workflow dispatch:
+ workflow_dispatch:
 
 
 
