@@ -1,0 +1,37 @@
+name: Run AWS Tags Script Manually
+
+on:
+  workflow_dispatch:
+    # inputs:
+    #   excel_file:
+    #     description: 'Path to the input Excel file with AWS Account IDs'
+    #     required: false
+    #     default: 'C:/Finops/AWSFinops/AWS_Account_Ids.xlsx'
+    #   output_file:
+    #     description: 'Name for the output Excel file'
+    #     required: false
+    #     default: 'AWS_Account_Tags_New.xlsx'
+
+jobs:
+  run-aws-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install boto3 openpyxl
+
+      
+
+      # - name: Run aws_tags.py
+      #   run: |
+      #     python AWS/getawstag.py
+

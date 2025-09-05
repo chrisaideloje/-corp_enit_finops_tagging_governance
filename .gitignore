@@ -1,3 +1,2 @@
-run-awstags.yml
-getawstag.py
+.env
 credentials.py
