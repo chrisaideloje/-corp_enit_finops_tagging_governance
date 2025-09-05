@@ -1,3 +1,4 @@
+import os
 import boto3
 import openpyxl
 import credentials
@@ -7,9 +8,10 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load AWS credentials
-id = credentials.AWS_ACCESS_KEY_ID
-key = credentials.AWS_SECRET_ACCESS_KEY
-region = credentials.AWS_DEFAULT_REGION
+#id = credentials.AWS_ACCESS_KEY_ID
+id = os.getenv("AWS_ACCESS_KEY_ID")
+key = os.getenv("AWS_SECRET_ACCESS_KEY")
+region = os.getenv("AWS_DEFAULT_REGION")
 
 def create_aws_session():
     """
