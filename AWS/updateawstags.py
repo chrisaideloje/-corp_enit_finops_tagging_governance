@@ -315,4 +315,7 @@ def main():
 
             # Write the tags to a new Excel file
             write_tags_to_excel(output_file, account_tag_map)
+            
+if __name__ == "__main__":
+    main()
 
