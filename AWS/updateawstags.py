@@ -240,7 +240,7 @@ def write_tags_to_excel(output_file, account_tag_map):
 def main():
 
     excel_file = "C:\\Users\\H630384\\project\\corp_enit_finops_tagging_governance\\AWS\\AWS_Account_Ids.xlsx" # Replace with your actual Excel file path
-
+    print(f"Using input Excel file: {excel_file}")
     output_file = "AWS_Account_Tags_New.xlsx"  # Output file name
 
     account_ids = load_excel_file(excel_file)
