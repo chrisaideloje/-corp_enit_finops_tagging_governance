@@ -4,9 +4,6 @@ import boto3
 
 import openpyxl
 
-import credentials
-
-
 import logging
 import argparse
 
