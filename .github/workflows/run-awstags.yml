@@ -30,18 +30,14 @@ jobs:
           pip install boto3 openpyxl
 
       
-      - name: Set AWS credentials from secrets
+      
+        
+
+      - name: Run aws_tags.py
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
         run: |
-          echo "AWS_ACCESS_KEY_ID = '${AWS_ACCESS_KEY_ID}'" > scripts/credentials.py
-          echo "AWS_SECRET_ACCESS_KEY = '${AWS_SECRET_ACCESS_KEY}'" >> scripts/credentials.py
-          echo "AWS_DEFAULT_REGION = '${AWS_DEFAULT_REGION}'" >> scripts/credentials.py
-
-
-      - name: Run aws_tags.py
-        run: |
-          python AWS/getawstag.py
+          python AWS/updateawstags.py
 
